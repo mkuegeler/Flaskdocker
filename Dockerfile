@@ -126,4 +126,20 @@ RUN set -ex; \
 		\) -exec rm -rf '{}' +; \
 	rm -f get-pip.py
 
-CMD ["python3"]
+# CMD ["python3"]
+# update pip
+# You should consider upgrading via the 'pip install --upgrade pip' command.
+
+# install flask via pip
+
+RUN pip install Flask
+
+# add custom application files
+# copy server.js, html and data
+COPY ./server.py server.py
+COPY ./static static
+
+
+EXPOSE 5000
+
+ENTRYPOINT ["python3","server.py"]

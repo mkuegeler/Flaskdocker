@@ -1,5 +1,5 @@
 # Flask sample web app
-# start with python2 server.py
+# start with python3 server.py
 
 from flask import Flask, request
 app = Flask(__name__, static_url_path='')
