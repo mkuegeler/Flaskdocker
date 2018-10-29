@@ -1,0 +1,22 @@
+# Python3 on Alpine
+#
+# run with:
+# docker-compose up -d
+
+# stop with:
+# docker-compose down
+
+
+# To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.  
+
+version: '2'
+services:
+ web:
+  build: .
+  volumes:
+    - "python_data:/app"
+  ports:
+    - "5000:5000"
+volumes:
+  python_data:
+     driver: local
