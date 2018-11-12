@@ -19,4 +19,4 @@ COPY ./static static
 
 EXPOSE 5000
 
-ENTRYPOINT ["python3","admin.py"]
+ENTRYPOINT ["python3","server.py"]
